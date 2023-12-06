@@ -9,9 +9,12 @@ def my_method(text,ia,ib,k):
     text : (array) each 
     ia,ib : (int) the index of the sequences to compare 
     k : (int) length of the kmers
-    
+
+    Returns : 
+    U : (int) kmer union of the 2 sequences 
+    I : (int) kmer intersection of the 2 sequences
     """
-    Dkmer = {} 
+    Dkmer = {} #Dictionnary containing kmers
     U = 0 #Kmer union
     I = 0 #Kmer intersection
     for kmer in stream_kmers(text[ia],k): #génère les kmer de la séquence A et les stocke dans un dictionnaire
